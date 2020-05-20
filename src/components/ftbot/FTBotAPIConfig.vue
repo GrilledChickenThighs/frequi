@@ -35,7 +35,11 @@
           <p>Minimal ROI: {{ botState.minimal_roi }}</p>
           <label for="sb-inline">Stake Amount: </label>
           <input type="number" :placeholder="botState.stake_amount" disabled />
-          <p>Stake Currency: {{ botState.stake_currency }}</p>
+          <p>
+            Stake Currency: <cryptoicon :symbol="botState.stake_currency" size="24" />
+            {{ botState.stake_currency }}
+          </p>
+
           <label for="sb-inline">Stop Loss: </label>
           <input type="number" :placeholder="botState.stoploss" disabled />
           <p>Ticker Interval: {{ botState.ticker_interval }}</p>
