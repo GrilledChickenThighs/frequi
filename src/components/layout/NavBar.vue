@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-navbar toggleable="lg" type="dark" variant="info">
-      <b-navbar-brand exact to="/">
+      <b-navbar-brand exact :to="{ name: 'Home' }">
         <img class="logo" src="@/assets/freqtrade-logo.png" alt="Home Logo" />
         <span class="navbar-brand-title">Freqtrade UI</span>
       </b-navbar-brand>
@@ -10,8 +10,8 @@
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
-          <b-nav-item to="/trade">Trade</b-nav-item>
-          <b-nav-item to="/about">About</b-nav-item>
+          <b-nav-item :to="{ name: 'Freqtrade Trade' }">Trade</b-nav-item>
+          <b-nav-item :to="{ name: 'About' }">About</b-nav-item>
         </b-navbar-nav>
 
         <!-- Right aligned nav items -->
@@ -21,8 +21,10 @@
               <template v-slot:button-content>
                 <b-avatar button src="https://placekitten.com/300/300"></b-avatar>
               </template>
-              <b-dropdown-item to="/settings">Settings</b-dropdown-item>
-              <b-dropdown-item to="/" v-on:click.native="logout()">Sign Out</b-dropdown-item>
+              <b-dropdown-item :to="{ name: 'Settings' }">Settings</b-dropdown-item>
+              <b-dropdown-item :to="{ name: 'Home' }" v-on:click.native="logout()"
+                >Sign Out</b-dropdown-item
+              >
             </b-nav-item-dropdown>
           </li>
           <li v-else>
