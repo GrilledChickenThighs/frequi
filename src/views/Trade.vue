@@ -18,7 +18,9 @@
                 <b-tab title="Daily Stats" lazy>
                   <DailyStats />
                 </b-tab>
-                <b-tab title="Whitelist"></b-tab>
+                <b-tab title="Whitelist">
+                  <FTBotAPIWhitelist />
+                </b-tab>
               </b-tabs>
               <div class="col-md-12">
                 <b-form-checkbox v-model="autoRefresh" size="lg" switch
@@ -60,6 +62,7 @@ import BotControls from '@/components/ftbot/BotControls.vue';
 import BotStatus from '@/components/ftbot/BotStatus.vue';
 import Balance from '@/components/ftbot/Balance.vue';
 import DailyStats from '@/components/ftbot/DailyStats.vue';
+import FTBotAPIWhitelist from '@/components/ftbot/FTBotAPIWhitelist.vue';
 
 export default {
   name: 'Trade',
@@ -70,6 +73,7 @@ export default {
     BotStatus,
     Balance,
     DailyStats,
+    FTBotAPIWhitelist,
   },
   created() {
     this.refreshAll();

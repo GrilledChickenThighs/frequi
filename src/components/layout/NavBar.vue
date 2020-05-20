@@ -12,6 +12,7 @@
         <b-navbar-nav>
           <b-nav-item :to="{ name: 'Freqtrade Trade' }">Trade</b-nav-item>
           <b-nav-item :to="{ name: 'About' }">About</b-nav-item>
+          <b-nav-item :to="{ name: 'Mock' }">Mock</b-nav-item>
         </b-navbar-nav>
 
         <!-- Right aligned nav items -->

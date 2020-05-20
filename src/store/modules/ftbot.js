@@ -25,6 +25,9 @@ export default {
     botState(state) {
       return state.botState;
     },
+    whitelist(state) {
+      return state.whitelist;
+    },
   },
   mutations: {
     updateTrades(state, trades) {
