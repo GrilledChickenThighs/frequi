@@ -5,10 +5,6 @@
         <div class="col-md-12">
           <div class="row">
             <div class="col-md-12">
-              <b-form-checkbox v-model="autoRefresh" size="lg" switch>AutoRefresh</b-form-checkbox>
-              <BotControls class="mt-3" />
-            </div>
-            <div class="col-md-12">
               <b-tabs content-class="mt-3" class="mt-3">
                 <b-tab title="Status" active>
                   <BotStatus />
@@ -22,9 +18,14 @@
                 <b-tab title="Daily Stats" lazy>
                   <DailyStats />
                 </b-tab>
-
-                <b-tab title="Whitelist"> </b-tab>
+                <b-tab title="Whitelist"></b-tab>
               </b-tabs>
+              <div class="col-md-12">
+                <b-form-checkbox v-model="autoRefresh" size="lg" switch
+                  >AutoRefresh</b-form-checkbox
+                >
+                <BotControls class="mt-3" />
+              </div>
             </div>
           </div>
         </div>

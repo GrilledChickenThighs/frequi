@@ -21,7 +21,7 @@
               <template v-slot:button-content>
                 <b-avatar button src="https://placekitten.com/300/300"></b-avatar>
               </template>
-              <b-dropdown-item :to="{ name: 'Settings' }">Settings</b-dropdown-item>
+              <b-dropdown-item :to="{ name: 'Freqtrade Settings' }">Settings</b-dropdown-item>
               <b-dropdown-item :to="{ name: 'Home' }" v-on:click.native="logout()"
                 >Sign Out</b-dropdown-item
               >

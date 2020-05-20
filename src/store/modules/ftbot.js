@@ -22,6 +22,9 @@ export default {
     closedtrades(state) {
       return state.trades.filter((item) => !item.is_open);
     },
+    botState(state) {
+      return state.botState;
+    },
   },
   mutations: {
     updateTrades(state, trades) {
