@@ -1,9 +1,10 @@
 <template>
-  <div class="list">
+  <div v-if="whitelist.length" class="list">
     <b-list-group v-for="(pair, key) in whitelist" :key="key">
       <b-list-group-item href="#" class="pair">{{ pair }}</b-list-group-item>
     </b-list-group>
   </div>
+  <p v-else>Not Connected to freqtrade Server. Please Login and make sure server is running.</p>
 </template>
 
 <script>
