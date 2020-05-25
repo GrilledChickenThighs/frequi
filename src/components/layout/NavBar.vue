@@ -13,14 +13,14 @@
           <b-nav-item :to="{ name: 'Freqtrade Trade' }">Trade</b-nav-item>
           <b-nav-item :to="{ name: 'About' }">About</b-nav-item>
           <b-nav-item :to="{ name: 'Mock' }">Mock</b-nav-item>
+          <BootswatchThemeSelect />
         </b-navbar-nav>
-
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
           <li class="nav-item" v-if="loggedIn">
             <b-nav-item-dropdown right>
               <template v-slot:button-content>
-                <b-avatar button src="https://placekitten.com/300/300"></b-avatar>
+                <b-avatar button>FT</b-avatar>
               </template>
               <b-dropdown-item :to="{ name: 'Freqtrade Settings' }">Settings</b-dropdown-item>
               <b-dropdown-item :to="{ name: 'Home' }" v-on:click.native="logout()"
@@ -41,10 +41,11 @@
 <script>
 import { mapActions, mapState } from 'vuex';
 import Login from '@/views/Login.vue';
+import BootswatchThemeSelect from '../BootswatchThemeSelect.vue';
 
 export default {
   name: 'NavBar',
-  components: { Login },
+  components: { Login, BootswatchThemeSelect },
   computed: {
     ...mapState('user', ['loggedIn']),
   },

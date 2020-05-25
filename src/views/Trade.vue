@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid">
+  <div class="container-fluid h-100">
     <div class="row">
       <div class="row col-md-4">
         <div class="col-md-12">
@@ -18,8 +18,9 @@
                 <b-tab title="Daily Stats" lazy>
                   <DailyStats />
                 </b-tab>
-                <b-tab title="Whitelist">
-                  <FTBotAPIWhitelist />
+
+                <b-tab title="Pairlist">
+                  <FTBotAPIPairList />
                 </b-tab>
               </b-tabs>
               <div class="col-md-12">
@@ -62,7 +63,7 @@ import BotControls from '@/components/ftbot/BotControls.vue';
 import BotStatus from '@/components/ftbot/BotStatus.vue';
 import Balance from '@/components/ftbot/Balance.vue';
 import DailyStats from '@/components/ftbot/DailyStats.vue';
-import FTBotAPIWhitelist from '@/components/ftbot/FTBotAPIWhitelist.vue';
+import FTBotAPIPairList from '@/components/ftbot/FTBotAPIPairList.vue';
 
 export default {
   name: 'Trade',
@@ -73,7 +74,7 @@ export default {
     BotStatus,
     Balance,
     DailyStats,
-    FTBotAPIWhitelist,
+    FTBotAPIPairList,
   },
   created() {
     this.refreshAll();
@@ -129,14 +130,11 @@ export default {
 
 <style scoped>
 .open-trades {
-  max-height: 300px;
   min-height: 250px;
+  max-height: 300px;
 }
 .trade-history {
   min-height: 300px;
-  max-height: 500px;
-}
-.performance-view {
   max-height: 500px;
 }
 </style>
